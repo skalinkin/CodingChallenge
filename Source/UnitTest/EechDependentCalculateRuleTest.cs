@@ -1,6 +1,7 @@
 ﻿using CodingChallengeApplication;
 using CodingChallengeApplication.BusinessCases;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NSubstitute;
 
 namespace UnitTest
 {
@@ -10,7 +11,9 @@ namespace UnitTest
         [TestMethod]
         public void CalculateReturnsOneThousend()
         {
-            var rule = new EechDependentCalculateRule();
+            INameStartsWithADiscount discountRule = NSubstitute.Substitute.For<INameStartsWithADiscount>();
+            discountRule.CalculateDiscount(null, 500).Returns(500);
+            var rule = new EechDependentCalculateRule(discountRule);
             Employee employee = new Employee();
             employee.Dependents.Add(new Dependent());
             employee.Dependents.Add(new Dependent());

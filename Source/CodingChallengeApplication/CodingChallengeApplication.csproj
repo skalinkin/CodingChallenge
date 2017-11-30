@@ -66,10 +66,12 @@
     <Compile Include="BusinessCases\ICalculatePreviewStrategy.cs" />
     <Compile Include="BusinessCases\ICalculateRule.cs" />
     <Compile Include="BusinessCases\IDeleteEmployee.cs" />
+    <Compile Include="BusinessCases\INameStartsWithADiscount.cs" />
     <Compile Include="BusinessCases\IShowEmployee.cs" />
     <Compile Include="BusinessCases\IShowEmployees.cs" />
     <Compile Include="BusinessCases\IUpdateEmployee.cs" />
     <Compile Include="BusinessCases\NameStartsFromADiscoutnCalculateRule.cs" />
+    <Compile Include="BusinessCases\NameStartsWithADiscount.cs" />
     <Compile Include="BusinessCases\ShowEmployee.cs" />
     <Compile Include="BusinessCases\ShowEmployees.cs" />
     <Compile Include="BusinessCases\UpdateEmployee.cs" />
