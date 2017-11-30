@@ -1,0 +1,44 @@
+﻿@model IEnumerable<WebHost.Models.EmployeeWithDeduction>
+
+@{
+    ViewBag.Title = "Employees";
+}
+
+<h2>Employees</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>@Html.DisplayNameFor(model => model.Employee.Name)</th>
+        <th>@Html.DisplayNameFor(model => model.YearDeduction)</th>
+        <th>@Html.DisplayNameFor(model => model.PaycheckDeduction)</th>
+        <th>@Html.DisplayNameFor(model => model.EmplyeeRecieves)</th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Employee.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.YearDeduction)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PaycheckDeduction)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmplyeeRecieves)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new {id = item.Employee.Id}) |
+                @Html.ActionLink("Details", "Details", new {id = item.Employee.Id}) |
+                @Html.ActionLink("Delete", "Delete", new {id = item.Employee.Id})
+            </td>
+        </tr>
+    }
+
+</table>
