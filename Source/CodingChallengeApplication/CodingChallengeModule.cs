@@ -15,7 +15,7 @@ namespace CodingChallengeApplication
             builder.RegisterType<CalculatePreviewStrategy>().As<ICalculatePreviewStrategy>();
             builder.RegisterType<CostPerYearCalculateRule>().As<ICalculateRule>();
             builder.RegisterType<EechDependentCalculateRule>().As<ICalculateRule>();
-            builder.RegisterType<NameStartsWithADiscount>().As<INameStartsWithADiscount>();
+            builder.RegisterType<NameStartsFromADiscoutnCalculateRule>().As<INameStartsWithADiscount>();
         }
     }
 }

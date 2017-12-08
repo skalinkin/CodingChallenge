@@ -71,7 +71,6 @@
     <Compile Include="BusinessCases\IShowEmployees.cs" />
     <Compile Include="BusinessCases\IUpdateEmployee.cs" />
     <Compile Include="BusinessCases\NameStartsFromADiscoutnCalculateRule.cs" />
-    <Compile Include="BusinessCases\NameStartsWithADiscount.cs" />
     <Compile Include="BusinessCases\ShowEmployee.cs" />
     <Compile Include="BusinessCases\ShowEmployees.cs" />
     <Compile Include="BusinessCases\UpdateEmployee.cs" />
