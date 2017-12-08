@@ -13,7 +13,7 @@ namespace UnitTest
             var rule = new NameStartsFromADiscoutnCalculateRule();
             Employee employee = new Employee() {Name = "Arron"};
             var expected = 900;
-            Assert.AreEqual( expected, rule.Calculate(employee, 1000));
+            Assert.AreEqual( expected, rule.CalculateDiscount(employee.Name, 1000));
         }
     }
 }

@@ -2,17 +2,17 @@
 
 namespace CodingChallengeApplication.BusinessCases
 {
-    internal class NameStartsFromADiscoutnCalculateRule : ICalculateRule
+    internal class NameStartsFromADiscoutnCalculateRule : INameStartsWithADiscount
     {
         public int Priority => 1000;
 
-        public double Calculate(Employee employee, double current)
+        public double CalculateDiscount(string name, double cost)
         {
-            if (employee.Name.StartsWith("A", StringComparison.InvariantCultureIgnoreCase))
+            if (name.StartsWith("A", StringComparison.InvariantCultureIgnoreCase))
             {
-                current = current * 0.9;
+               cost  = cost * 0.9;
             }
-            return current;
+            return cost; ;
         }
     }
 }
